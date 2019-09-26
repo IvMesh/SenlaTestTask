@@ -1,7 +1,7 @@
-def IsPrime(n)
+def IsPrime(n):
     i = 2
     j = 0
-    while(True)
+    while(True):
         if(i*i <=n and j!=1):
             if(n%i == 0):
                 j = j+1
@@ -13,8 +13,18 @@ def IsPrime(n)
             print("Число простое!")
             return True
 
-number =int(input(number))
-if number%2 == 0:
-    print("Данное число четное!")
-else print("Данное число нечетное!")
-IsPrime(number)
+def IsOdd(n):
+	if(number%2 == 0):
+		print("Данное число четное!")
+		return False
+	else: 
+		print("Данное число нечетное!")
+		return True
+while 1:
+	try:	
+		number =int(input("Введите число: "))
+		IsOdd(number)
+		IsPrime(number)
+		break
+	except ValueError:
+		print("При введении числа допущена ошибка! Повторите ввод!")
